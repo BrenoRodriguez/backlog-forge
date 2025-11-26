@@ -40,6 +40,9 @@
         "noUselessElse": "warn",
         "useConsistentCurlyBraces": "warn",
         "useBlockStatements": "error"
+      },
+      "nursery": {
+        "useSortedClasses": "error"
       }
     },
     "domains": {
@@ -52,6 +55,15 @@
       "source": {
         "organizeImports": "off"
       }
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true,
+      "cssModules": true
+    },
+    "formatter": {
+      "enabled": true
     }
   }
 }
