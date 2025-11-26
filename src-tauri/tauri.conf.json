@@ -12,9 +12,10 @@
   "app": {
     "windows": [
       {
-        "title": "backlog-forge",
-        "width": 800,
-        "height": 600
+        "title": "Backlog Forge",
+        "maximized": true,
+        "decorations": false,
+        "minWidth": 960
       }
     ],
     "security": {
