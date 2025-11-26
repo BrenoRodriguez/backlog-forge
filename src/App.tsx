@@ -1,5 +1,3 @@
-import { Route, Routes } from 'react-router'
-import { MainLayout, SettingsLayout } from './layouts'
 import {
   BacklogPage,
   GeneralSection,
@@ -9,7 +7,9 @@ import {
   Metadata3Section,
   Metadata4Section,
   Metadata5Section,
-} from './pages'
+} from '@/pages'
+import { Route, Routes } from 'react-router'
+import { MainLayout, SettingsLayout } from './layouts'
 
 export const App = () => {
   return (
@@ -21,9 +21,9 @@ export const App = () => {
           <Route index path='general' element={<GeneralSection />} />
           <Route path='metadata1' element={<Metadata1Section />} />
           <Route path='metadata2' element={<Metadata2Section />} />
-          <Route path='metadata 3' element={<Metadata3Section />} />
-          <Route path='metadata 4' element={<Metadata4Section />} />
-          <Route path='metadata 5' element={<Metadata5Section />} />
+          <Route path='metadata3' element={<Metadata3Section />} />
+          <Route path='metadata4' element={<Metadata4Section />} />
+          <Route path='metadata5' element={<Metadata5Section />} />
         </Route>
       </Route>
     </Routes>
