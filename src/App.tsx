@@ -1,51 +1,31 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import { invoke } from "@tauri-apps/api/core";
-import "./App.css";
+import { Route, Routes } from 'react-router'
+import { MainLayout, SettingsLayout } from './layouts'
+import {
+  BacklogPage,
+  GeneralSection,
+  HomePage,
+  Metadata1Section,
+  Metadata2Section,
+  Metadata3Section,
+  Metadata4Section,
+  Metadata5Section,
+} from './pages'
 
-function App() {
-  const [greetMsg, setGreetMsg] = useState("");
-  const [name, setName] = useState("");
-
-  async function greet() {
-    // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    setGreetMsg(await invoke("greet", { name }));
-  }
-
+export const App = () => {
   return (
-    <main className="container">
-      <h1>Welcome to Tauri + React</h1>
-
-      <div className="row">
-        <a href="https://vite.dev" target="_blank">
-          <img src="/vite.svg" className="logo vite" alt="Vite logo" />
-        </a>
-        <a href="https://tauri.app" target="_blank">
-          <img src="/tauri.svg" className="logo tauri" alt="Tauri logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <p>Click on the Tauri, Vite, and React logos to learn more.</p>
-
-      <form
-        className="row"
-        onSubmit={(e) => {
-          e.preventDefault();
-          greet();
-        }}
-      >
-        <input
-          id="greet-input"
-          onChange={(e) => setName(e.currentTarget.value)}
-          placeholder="Enter a name..."
-        />
-        <button type="submit">Greet</button>
-      </form>
-      <p>{greetMsg}</p>
-    </main>
-  );
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path='/' element={<HomePage />} />
+        <Route path='backlog' element={<BacklogPage />} />
+        <Route path='settings' element={<SettingsLayout />}>
+          <Route index path='general' element={<GeneralSection />} />
+          <Route path='metadata1' element={<Metadata1Section />} />
+          <Route path='metadata2' element={<Metadata2Section />} />
+          <Route path='metadata 3' element={<Metadata3Section />} />
+          <Route path='metadata 4' element={<Metadata4Section />} />
+          <Route path='metadata 5' element={<Metadata5Section />} />
+        </Route>
+      </Route>
+    </Routes>
+  )
 }
-
-export default App;
