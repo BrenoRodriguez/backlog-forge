@@ -8,7 +8,7 @@ export const TitleBar = () => {
   return (
     <section
       data-tauri-drag-region
-      className='flex flex-row-reverse fixed w-full'
+      className='fixed flex w-full flex-row-reverse'
     >
       <TitleBarItem className='hover:bg-red-600' onClick={() => window.close()}>
         <CloseIcon />
