@@ -38,8 +38,7 @@
       "style": {
         "noMagicNumbers": "warn",
         "noUselessElse": "warn",
-        "useConsistentCurlyBraces": "warn",
-        "useBlockStatements": "error"
+        "useConsistentCurlyBraces": "warn"
       },
       "nursery": {
         "useSortedClasses": "error"

@@ -27,6 +27,10 @@
     {
       "identifier": "fs:allow-exists",
       "allow": [{ "path": "**" }]
+    },
+    {
+      "identifier": "fs:allow-create",
+      "allow": [{ "path": "**" }]
     }
   ]
 }
