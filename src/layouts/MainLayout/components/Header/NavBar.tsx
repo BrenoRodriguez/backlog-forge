@@ -1,4 +1,4 @@
-import { NavItem } from './NavItem'
+import { NavItem } from '@/components'
 
 const NAV_ITEMS = [
   { label: 'Home', to: '/' },

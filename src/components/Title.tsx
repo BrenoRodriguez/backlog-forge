@@ -8,10 +8,12 @@ const titleVariants = cva('', {
     type: {
       default: '',
       header: 'select-none first-letter:text-accent-light',
+      settings: 'text-center',
     },
     size: {
-      default: '',
+      default: 'text-3xl',
       header: 'text-4xl',
+      settings: 'text-2xl',
     },
   },
   defaultVariants: {

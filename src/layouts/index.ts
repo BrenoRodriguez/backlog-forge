@@ -1,2 +1,2 @@
 export * from './MainLayout'
-export * from './SettingsLayout'
+export * from './SettingsLayout/SettingsLayout'
