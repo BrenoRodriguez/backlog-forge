@@ -1,3 +1,11 @@
+import { Title } from '@/components'
+
 export const GeneralSection = () => {
-  return <></>
+  return (
+    <>
+      <Title type='settings' size='settings'>
+        General
+      </Title>
+    </>
+  )
 }
