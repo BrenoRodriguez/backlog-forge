@@ -1,2 +1,2 @@
 export * from './ensureExists'
-export * from './getBackloggyPaths'
+export * from './getPaths'
