@@ -1,6 +1,6 @@
-import { db } from '@/lib/db'
-import { GET_SETTINGS_QUERY } from '@/lib/db/queries'
-import { type Settings, SettingsSchema } from '@/lib/db/schemas'
+import { db } from '@/db'
+import { GET_SETTINGS_QUERY } from '@/db/queries'
+import { type Settings, SettingsSchema } from '@/db/schema'
 import { getErrorMessage } from '@/utils'
 
 export async function getSettings(): Promise<Settings> {

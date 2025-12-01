@@ -1,4 +1,4 @@
-import { SettingsSchema } from '@/lib/db/schemas'
+import { SettingsSchema } from '@/db/schema/settings/settings'
 import { useQuery } from '@tanstack/react-query'
 import { getSettings } from '../utils/getSettings'
 
